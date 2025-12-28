@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/gradient_bg"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/inputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="@android:color/white"
+        android:elevation="4dp">
+
+        <EditText
+            android:id="@+id/taskInput"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="8dp"
+            android:hint="Add Task"
+            android:padding="8dp"
+            tools:ignore="Autofill,HardcodedText,TextFields,TouchTargetSizeCheck" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/selectDateButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Add Date:"
+                android:textColor="@color/black"
+                android:drawableRight="@drawable/outline_calendar_add_on_24"
+                android:backgroundTint="@color/blue"
+                android:layout_marginEnd="4dp"
+                tools:ignore="ButtonStyle,HardcodedText" />
+
+            <Button
+                android:id="@+id/selectTimeButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Select Time:"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/blue"
+                android:drawableRight="@drawable/twotone_access_time_filled_24"
+                android:layout_marginStart="4dp"
+                tools:ignore="ButtonStyle,HardcodedText" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/dateTimeDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" Date/Time"
+            android:textColor="#666666"
+            android:padding="4dp"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="4dp"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="New ADD"
+            android:backgroundTint="@color/blue1"
+            android:layout_marginTop="8dp"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/taskList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/inputLayout"
+        android:layout_marginTop="16dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="8dp" />
+
+</RelativeLayout>
